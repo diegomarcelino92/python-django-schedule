@@ -19,7 +19,8 @@
         <label for="exampleInputPassword1">Password</label>
         <input name="password"  value="{{ request.POST.password }}" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
       </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <button type="submit" class="btn btn-primary mr-2">Submit</button>
+      <a class="btn btn-primary" href="{% url 'register' %}" role="button">Register</a>
     </form>
   {% else %}
     <p>You did login with {{ user }}, <a href="{% url 'logout' %}">click here to logout</a></p>

@@ -23,6 +23,7 @@ def login(request):
         return redirect('dashboard')
 
 
+@login_required(redirect_field_name='login')
 def logout(request):
     auth.logout(request)
     return redirect('login')

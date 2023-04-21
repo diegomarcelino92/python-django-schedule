@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "django_seed",
     "contacts.apps.ContactsConfig",
     "accounts.apps.AccountsConfig",
 ]
@@ -145,3 +144,8 @@ MESSAGE_TAGS = {
     constants.DEBUG: "alert-info",
     constants.INFO: "alert-info",
 }
+
+# Fixtures
+FIXTURE_DIRS = [
+    'fixtures',
+]

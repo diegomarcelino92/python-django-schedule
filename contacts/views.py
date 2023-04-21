@@ -1,4 +1,5 @@
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.http import Http404
 from django.shortcuts import render
@@ -8,6 +9,7 @@ from .repository import ContactRepository
 contact_repository = ContactRepository()
 
 
+@login_required(redirect_field_name='login')
 def index(request):
     contacts = contact_repository.order_all_by("id")
 
@@ -18,6 +20,7 @@ def index(request):
     return render(request, "contacts.html", {"contacts": contacts})
 
 
+@login_required(redirect_field_name='login')
 def contact(request, id):
     try:
         contact = contact_repository.get_by_id(id)
@@ -30,6 +33,7 @@ def contact(request, id):
     return render(request, "contact.html", {"contact": contact})
 
 
+@login_required(redirect_field_name='login')
 def search(request):
     term = request.GET.get("term")
 

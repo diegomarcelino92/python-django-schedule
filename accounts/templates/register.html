@@ -36,5 +36,6 @@
     <input name="password2" value="{{ request.POST.password2 }}" type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
+  <a class="btn btn-primary" href="{% url 'login' %}" role="button">Login</a>
 </form>
 {% endblock %}
