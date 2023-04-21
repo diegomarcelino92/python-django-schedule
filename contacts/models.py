@@ -9,6 +9,10 @@ class Category(models.Model):
         return self.name
 
 
+def upload_to(instance, filename):
+    return f'{instance.id}/{filename}'
+
+
 class Contact(models.Model):
     name = models.CharField(max_length=255)
     surname = models.CharField(max_length=255, blank=True)
@@ -18,7 +22,7 @@ class Contact(models.Model):
     description = models.TextField(blank=True)
     category = models.ForeignKey(Category, on_delete=models.DO_NOTHING)
     disabled = models.BooleanField(default=False)
-    photo = models.ImageField(blank=True, upload_to='photos/%Y/%m/')
+    photo = models.ImageField(blank=True, upload_to=upload_to)
 
     def __str__(self):
         return self.name
