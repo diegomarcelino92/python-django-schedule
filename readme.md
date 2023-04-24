@@ -19,6 +19,12 @@ pip install -r requirements.txt
 docker-compose up -d
 ```
 
+### Activate venv
+
+```sh
+. venv/bin/activate 
+```
+
 ### Run migration
 
 ```sh
