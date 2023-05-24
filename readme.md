@@ -51,3 +51,13 @@ python manage.py runserver
 username: development
 password: 123123
 ```
+
+## Admin
+
+### Create super user and fill password
+
+```sh
+    python manage.py createsuperuser --email admin@email.com --username admin
+```
+
+PS: You can access /admin with `admin@email.com` and filled password
