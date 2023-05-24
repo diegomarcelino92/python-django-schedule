@@ -60,4 +60,4 @@ password: 123123
     python manage.py createsuperuser --email admin@email.com --username admin
 ```
 
-PS: You can access /admin with `admin@email.com` and filled password
+PS: You can access /admin with username `admin` and filled password
