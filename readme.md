@@ -5,6 +5,12 @@
 - Docker
 - Python3
 
+## Activate venv
+
+```sh
+. venv/bin/activate 
+```
+
 ## Install dependencies
 
 ```sh
@@ -17,12 +23,6 @@ pip install -r requirements.txt
 
 ```sh
 docker-compose up -d
-```
-
-### Activate venv
-
-```sh
-. venv/bin/activate 
 ```
 
 ### Run migration
